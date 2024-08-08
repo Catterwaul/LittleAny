@@ -14,4 +14,18 @@ struct EquatableTests {
     struct Equatable: Swift.Equatable { }
     #expect(try Equatable.equate(Equatable(), Equatable()))
   }
+
+  @Test func equals() throws {
+    #expect(try "😾".equals("😾" as Any))
+    #expect(try "😾".equals("🦮" as any Equatable) == false)
+    #expect(try (cast("😾") as any Equatable).equals("😾"))
+    #expect(throws: Cast.Error.self) { try "😾".equals(0) }
+
+    let cupcake = "🧁"
+    let notCake = ~0xca_e
+
+    let cupcakeEquals = cupcake.equals as (Any) throws(_) -> _
+    #expect(try cupcakeEquals(cupcake))
+    #expect(throws: Cast.Error.self) { try cupcakeEquals(notCake) }
+  }
 }

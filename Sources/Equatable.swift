@@ -7,4 +7,10 @@ public extension Equatable {
     let (self0, self1) = try cast((uncast0, uncast1)) as (Self, Self)
     return self0 == self1
   }
+
+  /// Equate with a value of unknown type.
+  /// - Throws: `Cast.Error` if `uncast` cannot be cast to this type.
+  func equals<Uncast>(_ uncast: Uncast) throws(Cast.Error) -> Bool {
+    self == (try cast(uncast))
+  }
 }
