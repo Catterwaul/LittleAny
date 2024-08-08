@@ -1,0 +1,33 @@
+{
+  "originHash" : "efe55f2787d9e6d113e7ed4b1c2e9157e10bfe03623ce3b2f6ab5eb6c8c90a3a",
+  "pins" : [
+    {
+      "identity" : "cast",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Catterwaul/Cast",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0d2261c2c872bc66efc417c00c59843cfd335c63"
+      }
+    },
+    {
+      "identity" : "swift-docc-plugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-docc-plugin",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8357c7750dbed168f245f46def146b454d371b1a"
+      }
+    },
+    {
+      "identity" : "swift-docc-symbolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-docc-symbolkit",
+      "state" : {
+        "revision" : "b45d1f2ed151d057b54504d653e0da5552844e34",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
